@@ -11,7 +11,7 @@ router.post("/", (req, res, next) => {
   const message = {
     text: req.body.text,
     user: req.body.user,
-    added: new Date(),
+    added: new Date().toLocaleString(),
   };
 
   messages.push(message);
