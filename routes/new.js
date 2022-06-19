@@ -1,4 +1,5 @@
 const express = require("express");
+const messages = require("../public/javascripts/messages");
 
 const router = express.Router();
 
@@ -12,6 +13,8 @@ router.post("/", (req, res, next) => {
     user: req.body.user,
     added: new Date(),
   };
+
+  messages.push(message);
   res.redirect("/");
 });
 
