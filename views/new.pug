@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    form(action="/new" method="POST")
+        input(type="text" name="user" placeholder="Username" required)
+        input(type="text" name="text" placeholder="Message" required)
+        input(type="submit" value="Add Message")
